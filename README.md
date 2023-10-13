@@ -130,6 +130,8 @@ private:
 
 #endif
 ```
+## About Car Chassis
+This project can work with a 2WD or 4WD car chassis like these ones:
 
 ### Reference 1 (International):
 <img src="https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/ab262906-3d15-41b7-8fab-b9664d6263a4" width="300">
