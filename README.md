@@ -27,7 +27,7 @@ The car is controlled by a Virtual Joystick in a Web page. The NodeMCU connects 
 * 01 - Battery support
 
 ## About PlatformIO IDE
-Platform IO is a plugin for Microsoft Virtual Studio Code. It is a more robust IDE compared to official Arduino IDE. It also allows us to easily create our own private libraries and use a more object oriented code.
+Platform IO is a plugin for Microsoft Visual Studio Code. It is a more robust IDE compared to the official Arduino IDE. It also allows us to easily create our own private libraries and use a more object oriented code.
 
 ## About the code
 The PINs can be customized in the `main.cpp` 
@@ -134,23 +134,23 @@ private:
 This project can work with a 2WD or 4WD car chassis like these ones:
 
 ### Reference 1 (International):
-<img src="https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/ab262906-3d15-41b7-8fab-b9664d6263a4" width="300">
-
-https://www.aliexpress.us/item/3256805855273192.html
-
-
-### Reference 2 (International):
 <img src="https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/6e92b8e4-c452-4b1f-b8ce-b5e51e591bed" width="300">
 
 https://www.aliexpress.us/item/3256801542172576.html
 
-### Reference 3 (Brazil):
+### Reference 2 (Brazil):
 <img src="https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/a79de4b0-ea64-42f6-b933-a801766820ab" width="300">
 
 https://www.robocore.net/robotica-robocore/plataforma-robotica-rocket-tank
 
+### Reference 3 (International):
+<img src="https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/ab262906-3d15-41b7-8fab-b9664d6263a4" width="300">
+
+https://www.aliexpress.us/item/3256805855273192.html
+
+Note: 4WD chassis requires a higher power supply
 
 ## Fritzing file
-The eletronic schematic was created in the [Fritzing](https://fritzing.org/) software and can be downloaded at
+The electronic schematic was created in the [Fritzing](https://fritzing.org/) software and can be downloaded at
 [NodeMcuRcCar.zip](https://github.com/vitorccs/nodemcu-rc-car/files/12888743/NodeMcuRcCar.zip)
 
