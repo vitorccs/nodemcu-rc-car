@@ -15,75 +15,59 @@ void WebJoystickHandler::setDebug(bool enable)
 
 void WebJoystickHandler::handle(JoyCoords coords)
 {
-    const int16_t angle = coords.angle;
+    const String direction = coords.direction;
     const int16_t speed = coords.speed;
 
-    const bool isForward = (angle >= 170) && (angle <= 190);
-
-    if (isForward)
+    if (direction == "N")
     {
         debugMovement(coords, "Forward");
         this->_car.forward(speed);
         return;
     }
 
-    const bool isBackward = (angle >= 0 && angle <= 10) || (angle >= 350 && angle <= 360);
-
-    if (isBackward)
+    if (direction == "S")
     {
         debugMovement(coords, "Backward");
         this->_car.backward(speed);
         return;
     }
 
-    const bool isLeft = (angle >= 260) && (angle <= 280);
-
-    if (isLeft)
+    if (direction == "W")
     {
         debugMovement(coords, "Left");
         this->_car.turn(speed, 0);
         return;
     }
 
-    const bool isRight = (angle >= 80) && (angle <= 100);
-
-    if (isRight)
+    if (direction == "E")
     {
         debugMovement(coords, "Right");
         this->_car.turn(0, speed);
         return;
     }
 
-    const bool isFowardLeft = (angle > 190) && (angle < 260);
-
-    if (isFowardLeft)
+    if (direction == "NW")
     {
         debugMovement(coords, "Forward Left");
         this->_car.forwardLeft(speed);
         return;
     }
 
-    const bool isFowardRight = (angle > 100) && (angle < 170);
-
-    if (isFowardRight)
+    if (direction == "NE")
     {
         debugMovement(coords, "Forward Right");
         _car.forwardRight(speed);
         return;
     }
 
-    const bool isBackwardLeft = (angle > 280) && (angle < 350);
-
-    if (isBackwardLeft)
+    if (direction == "SW")
     {
         debugMovement(coords, "Backward Left");
         this->_car.backwardLeft(speed);
         return;
     }
 
-    const bool isBackwardRight = (angle > 10) && (angle < 80);
-
-    if (isBackwardRight)
+    if (direction == "SE")
     {
         debugMovement(coords, "Backward Right");
         this->_car.backwardRight(speed);
@@ -115,7 +99,7 @@ void WebJoystickHandler::debugMovement(JoyCoords coords, String direction)
 
     Serial.print("(speed: ");
     Serial.print(coords.speed);
-    Serial.print(", angle: ");
-    Serial.print(coords.angle);
+    Serial.print(", direction: ");
+    Serial.print(coords.direction);
     Serial.println(") " + direction);
 }

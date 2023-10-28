@@ -241,11 +241,11 @@ const char indexHtml[] PROGMEM = R"rawliteral(
             sendJoystick() {
                 const xAxis = this.joystick.GetX();
                 const yAxis = this.joystick.GetY();
-                const angle = Math.round((Math.PI + Math.atan2(-xAxis, yAxis)) * 180 / Math.PI);
+                const direction = this.joystick.GetDir();
                 const speed = Math.abs(xAxis) > Math.abs(yAxis)
                     ? Math.abs(xAxis)
                     : Math.abs(yAxis);
-                const params = { speed, angle };
+                const params = { direction, speed };
 
                 this.socketClient.send(params);
             }
@@ -290,9 +290,9 @@ SocketServer::SocketServer() : webServer(80),
                                webSocket("/ws")
 {
 
-    ALIAS_ANGLE = "angle";
-    ALIAS_SPEED = "speed";
     ALIAS_BUTTON_A = "button-a";
+    ALIAS_DIRECTION = "direction";
+    ALIAS_SPEED = "speed";
 
     AwsEventHandler handler = [&](AsyncWebSocket *server,
                                   AsyncWebSocketClient *client,
@@ -395,8 +395,8 @@ void SocketServer::handleWebSocketMessage(void *arg, uint8_t *data, size_t lengt
         }
 
         JoyCoords coords;
-        coords.angle = json[ALIAS_ANGLE]; // [0;360]
-        coords.speed = json[ALIAS_SPEED]; // [0;100]
+        coords.speed = json[ALIAS_SPEED];
+        coords.direction = String(json[ALIAS_DIRECTION]);
 
         _coordsHandler(coords);
 

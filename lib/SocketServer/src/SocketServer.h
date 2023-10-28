@@ -34,7 +34,7 @@ private:
     AsyncWebSocket webSocket;
     CoordsHandlerFunction _coordsHandler;
     ButtonAToggleHandlerFunction _buttonAHandler;
-    const char *ALIAS_ANGLE;
+    const char *ALIAS_DIRECTION;
     const char *ALIAS_SPEED;
     const char *ALIAS_BUTTON_A;
 };
