@@ -8,7 +8,6 @@
 #include <SocketServer.h>
 #include <ESPAsyncWebServer.h>
 #include <JoyCoords.h>
-#include <SoftwareSerial.h>
 
 #define WIFI_SSID "YOUR_SSID"
 #define WIFI_PWD "YOUR_PWD"
