@@ -4,8 +4,6 @@
 #include <ESPAsyncWebServer.h>
 #include <ESPAsyncTCP.h>
 #include <JoyCoords.h>
-#include <iostream>
-#include <functional>
 
 typedef std::function<void(JoyCoords coords)> CoordsHandlerFunction;
 typedef std::function<void(bool buttonToggle)> ButtonAToggleHandlerFunction;
