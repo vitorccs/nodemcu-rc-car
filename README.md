@@ -7,8 +7,7 @@ Remote Controlled Car using NodeMCU ESP8266-12 V2 board.
 
 
 ## Description
-![BluetoohRcCar_bb](https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/9ca79c8e-4f59-4822-86c7-91603ebf01bb)
-
+![NodeMcuRcCar_bb](https://github.com/vitorccs/nodemcu-rc-car/assets/9891961/021a5117-421d-45c6-88fc-917f3008b755)
 
 This is a [Platform IO IDE](https://platformio.org/platformio-ide) project coded in C++. 
 
